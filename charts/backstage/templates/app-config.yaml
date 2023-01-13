@@ -11,7 +11,7 @@ stringData:
       # Should be the same as backend.baseUrl when using the `app-backend` plugin.
       #baseUrl: http://{{ .Release.Name }}:7007
       baseUrl: {{ required "Provide App baseUrl in values" .Values.backstage.baseUrl }}
-
+      title: Welcome
     organization:
       name: "{{ .Values.backstage.companyname }}"
 
