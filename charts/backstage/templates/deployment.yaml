@@ -37,6 +37,9 @@ spec:
             - --config
             - /config/additional-config.yaml
             {{- end }}
+          envFrom:
+          - secretRef:
+              name: github-credentials
           env:
           - name: POSTGRES_ADMIN_PASSWORD
             valueFrom:

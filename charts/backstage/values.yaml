@@ -2,8 +2,8 @@ replicaCount: 1
 
 image:
   pullPolicy: Always
-  registry: ghcr.io
-  repository: janus-idp/redhat-backstage-build
+  registry: default-route-openshift-image-registry.apps.cluster-nrxqz.nrxqz.sandbox2155.opentlc.com
+  repository: backstage/backstage
   version: "latest"
 
 imagePullSecrets: []
@@ -101,8 +101,8 @@ securityContext: {}
 
 ## There is a secret created via the template/
 backstage:
-  companyname: "Red Hat Backstage Helm Chart"
-  baseUrl: ""
+  companyname: "Ingmar Backstage Demo"
+  baseUrl: "https://backstagechart-backstage.apps.cluster-nrxqz.nrxqz.sandbox2155.opentlc.com"
 
   ## Override Catalog with here
   catalog:
